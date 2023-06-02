@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress bar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="script/main.js"></script>
+</head>
+
+<body>
+    <section class="one">
+
+    </section>
+    <section class="two">
+        <div class="block">
+            <div class="box">
+                <p class="number">
+                    <span class="num">80</span>
+                    <span class="sub">%</span>
+                </p>
+                <p class="title">HTML</p>
+            </div>
+            <span class="dot"></span>
+            <svg class="svg">
+                <circle class="circle" cx="90" cy="90" r="80"></circle>
+            </svg>
+            <!--
+                XML: HTML과 같이 대칭 구조를 가진다
+                CSS의 z-index와 같은 레이어 순서를 지정하는 것이 없다
+                따라서 반드시 요소가 선언된 순서대로 밑에서 쌓아져서 올려진다
+
+                linearGradient 태그: 그라디언트를 정의한다
+
+                defs 태그: definitions의 약자로, 나중에 참조해서 사용할
+                개체를 정의하기 위한 요소 - 정의된 요소에서는 렌더링이
+                되지 않는다
+                (XML 문서구조상 defs가 circle보다 먼저 선언되어야 한다)
+                맨 마지막에 한 번만 쓴다
+
+                stop 태그: 그라디언트에서 사용할 색상과 위치를 정의한다
+            -->
+        </div>
+        <div class="block">
+            <div class="box">
+                <p class="number">
+                    <span class="num">100</span>
+                    <span class="sub">%</span>
+                </p>
+                <p class="title">CSS</p>
+            </div>
+            <span class="dot"></span>
+            <svg class="svg">
+                <circle class="circle" cx="90" cy="90" r="80"></circle>
+            </svg>
+        </div>
+        <div class="block">
+            <div class="box">
+                <p class="number">
+                    <span class="num">40</span>
+                    <span class="sub">%</span>
+                </p>
+                <p class="title">JS</p>
+            </div>
+            <span class="dot"></span>
+            <svg class="svg">
+                <defs>
+                    <linearGradient id="gradientStyle">
+                        <stop offset="0%" stop-color="aqua" />
+                        <stop offset="100%" stop-color="royalblue" />
+                    </linearGradient>
+                </defs>
+                <circle class="circle" cx="90" cy="90" r="80"></circle>
+            </svg>
+        </div>
+    </section>
+    <section class="three">
+
+    </section>
+</body>
+
+</html>
